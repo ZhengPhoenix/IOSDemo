@@ -11,13 +11,23 @@
 
 @implementation FlipViewController
 
+@synthesize front,back;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"Flip loaded");
     
-    UILabel *text = [[UILabel alloc] initWithFrame:CGRectMake(50, 40, 100, 200)];
-    [text setText:@"text"];
-    [self.view addSubview:text];
+    [self.view addSubview:front];
+}
+
+- (void)flip2Back:(id)sender {
+    NSLog(@"flip to back");
+    [UIView transitionFromView:self.front toView:self.back duration:1.0 options:UIViewAnimationOptionTransitionFlipFromRight completion:nil];
+}
+
+- (void)flip2Front:(id)sender {
+    NSLog(@"flip to fron");
+    [UIView transitionFromView:self.back toView:self.front duration:1.0 options:UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
 }
 
 @end

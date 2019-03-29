@@ -12,7 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlipViewController">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="LxY-q3-dpd"/>
+                <outlet property="back" destination="qTE-yh-I8Q" id="P80-BL-Z66"/>
+                <outlet property="front" destination="u9g-4j-ING" id="Aaa-bM-Bct"/>
+                <outlet property="view" destination="iN0-l3-epB" id="X0Y-Gx-OfM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,6 +23,59 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+        <view contentMode="scaleToFill" id="u9g-4j-ING" userLabel="Front">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Front" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkP-Xe-opB">
+                    <rect key="frame" x="187" y="333" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNz-yK-4fd">
+                    <rect key="frame" x="187" y="333" width="0.0" height="0.0"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="flip2Back:" destination="-1" eventType="touchUpInside" id="Dng-6p-45A"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.39930969119999998" green="0.34228954569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QkP-Xe-opB" firstAttribute="centerY" secondItem="u9g-4j-ING" secondAttribute="centerY" id="29H-cA-2g7"/>
+                <constraint firstItem="JNz-yK-4fd" firstAttribute="centerX" secondItem="u9g-4j-ING" secondAttribute="centerX" id="3AY-ki-899"/>
+                <constraint firstItem="QkP-Xe-opB" firstAttribute="centerX" secondItem="u9g-4j-ING" secondAttribute="centerX" id="3cD-wQ-hEO"/>
+                <constraint firstAttribute="bottom" secondItem="JNz-yK-4fd" secondAttribute="bottom" constant="60" id="umk-nT-VOo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="xtR-Nj-44d"/>
+        </view>
+        <view contentMode="scaleToFill" id="qTE-yh-I8Q" userLabel="Back">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeN-48-Yqw">
+                    <rect key="frame" x="187" y="333" width="0.0" height="0.0"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="flip2Front:" destination="-1" eventType="touchUpInside" id="Cww-7I-eeU"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Front" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weD-dE-kke" userLabel="Back">
+                    <rect key="frame" x="187" y="333" width="0.0" height="0.0"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xeN-48-Yqw" firstAttribute="centerX" secondItem="qTE-yh-I8Q" secondAttribute="centerX" id="kKY-iK-2wE"/>
+                <constraint firstItem="xeN-48-Yqw" firstAttribute="top" secondItem="qTE-yh-I8Q" secondAttribute="top" constant="60" id="ytu-Zv-3Ki"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="jLT-9G-1hL"/>
         </view>
     </objects>
 </document>

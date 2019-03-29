@@ -16,4 +16,10 @@
 
 @interface FlipViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIView *front;
+@property (strong, nonatomic) IBOutlet UIView *back;
+
+- (IBAction)flip2Back:(id)sender;
+- (IBAction)flip2Front:(id)sender;
+
 @end
